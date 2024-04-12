@@ -8,10 +8,17 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
+    <style>
+        body{
+            background-color: beige;
+            text-align: center;
+        }
+    </style>
+
 </head>
 <body>
   
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" > <!-- Barra de navegacion-->
         <a class="navbar-brand" href="#">DuocTec</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -19,28 +26,28 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="main.html">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">##</a>
+              <a class="nav-link" href="carro.html">Comprar notebook</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">##</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">##</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">##</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">##</a>
-            </li>
+                <a class="nav-link" href="formulario.html">Formulario</a>
+              </li>
           </ul>
         </div>
       </nav>
       
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="padding-left: 20px; padding-top: 20px; padding-right: 20px; background-color: bisque;">
+      <div style="margin-top: 20px; margin-bottom: 20px"><!-- Boton para mostrar fecha y hora-->
+        <button type="button" class="btn btn-dark"
+        onclick="document.getElementById('demo').innerHTML = Date()">
+        Mostrar día y hora</button>
+        
+        <p id="demo"></p>  
+      </div>
+
+      <!-- Carrousel de fotos de notebooks-->
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="padding-left: 20px; padding-top: 20px; padding-right: 20px; background-color: beige;">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -68,5 +75,32 @@
           </button>
         </div>
       </div>
+      <!-- Cards de notebooks-->
+      <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="notebook1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">HorizonElite Notebook Pro</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="ventanotebook1.html" class="btn btn-primary">Ver</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="notebook2.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">NebulaVision UltraNote</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="ventanotebook2.html" class="btn btn-primary">Ver</a>
+                    </div>
+                  </div>
+            </div>
+        </div>  
+      </div>
+
+
 </body>
 </html>
